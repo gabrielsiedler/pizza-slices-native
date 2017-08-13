@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { Font } from 'expo';
 
 import Loader from './src/components/Loader/Loader';
-import openSans from './src/assets/fonts/opensans.ttf';
+import courgette from './src/assets/fonts/courgette.ttf';
 
 class App extends Component {
   componentDidMount() {
     Font
-      .loadAsync({ 'open-sans': openSans })
+      .loadAsync({ courgette })
       .then(() => this.setState({ fontOk: true }));
   }
 

@@ -13,8 +13,8 @@ const StyledView = styled(View)`
 `;
 
 const Title = styled(Text)`
-  font-family: 'open-sans';
-  font-size: 40px;
+  font-family: 'courgette';
+  font-size: 55px;
 `;
 
 const Company = styled(Text)`
