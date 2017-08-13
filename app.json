@@ -1,5 +1,8 @@
 {
   "expo": {
+    "name": "Pizza Slices",
+    "slug": "pizza-slices",
+    "orientation": "portrait",
     "sdkVersion": "19.0.0"
   }
 }
