@@ -1,27 +1,28 @@
 import React, { Component } from 'react';
 import styled from 'styled-components/native';
+import PropTypes from 'prop-types';
 import { Text, View, Image } from 'react-native';
 
 import pizzaImage from './pizza.png';
 
-const StyledView = styled.View`
+const StyledView = styled(View)`
   flex: 1;
   background-color: #fff;
   align-items: center;
   padding: 20% 0;
 `;
 
-const Title = styled.Text`
+const Title = styled(Text)`
   font-family: 'open-sans';
   font-size: 40px;
 `;
 
-const Company = styled.Text`
+const Company = styled(Text)`
   font-size: 13px;
   color: lightgrey;
 `;
 
-const Logo = styled.Image`
+const Logo = styled(Image)`
   flex: 1;
   width: 60%;
   resize-mode: contain;
@@ -41,5 +42,9 @@ class Loader extends Component {
     );
   }
 }
+
+Loader.propTypes = {
+  className: PropTypes.string,
+};
 
 export default Loader;
