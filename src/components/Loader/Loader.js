@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components/native';
 import { Text, View, Image } from 'react-native';
 
+import pizzaImage from './pizza.png';
+
 const StyledView = styled.View`
   flex: 1;
   background-color: #fff;
@@ -25,7 +27,6 @@ const Logo = styled.Image`
   resize-mode: contain;
 `;
 
-import pizzaImage from './pizza.png';
 
 class Loader extends Component {
   render() {

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import styled from 'styled-components/native';
 import { Font } from 'expo';
 
 import Loader from './src/components/Loader/Loader';
