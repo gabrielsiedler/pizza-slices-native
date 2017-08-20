@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components/native';
 import PropTypes from 'prop-types';
-import { Text, View, Image } from 'react-native';
-
-import pizzaImage from './pizza.png';
+import { Text, View } from 'react-native';
 
 const StyledView = styled(View)`
   flex: 1;
@@ -22,29 +20,22 @@ const Company = styled(Text)`
   color: lightgrey;
 `;
 
-const Logo = styled(Image)`
-  flex: 1;
-  width: 60%;
-  resize-mode: contain;
-`;
 
-
-class Loader extends Component {
+class Presentation extends Component {
   render() {
     const { className } = this.props;
 
     return (
       <StyledView className={className}>
         <Title>Pizza Slices</Title>
-        <Logo source={pizzaImage} />
         <Company>Zidlar</Company>
       </StyledView>
     );
   }
 }
 
-Loader.propTypes = {
+Presentation.propTypes = {
   className: PropTypes.string,
 };
 
-export default Loader;
+export default Presentation;

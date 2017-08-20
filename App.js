@@ -4,7 +4,10 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 
-import Loader from './src/components/Loader/Loader';
+import { Text } from 'react-native';
+
+import Presentation from './src/components/Presentation';
+import Layout from './src/components/Layout';
 import courgette from './src/assets/fonts/courgette.ttf';
 
 const reducers = combineReducers({ test: () => ({}) });
@@ -21,7 +24,12 @@ class App extends Component {
     if (this.state && this.state.fontOk) {
       return (
         <Provider store={store}>
-          <Loader />
+          {/* <Presentation /> */}
+          <Layout>
+            <Text>Header?</Text>
+            <Text>Body?</Text>
+            <Text>Footer?</Text>
+          </Layout>
         </Provider>
       );
     }
