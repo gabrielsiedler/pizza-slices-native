@@ -3,11 +3,12 @@ import { Font } from 'expo';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
+import { ThemeProvider } from 'styled-components/native';
 
-import { Text } from 'react-native';
-
-import Presentation from './src/components/Presentation';
+import theme from './src/theme';
 import Layout from './src/components/Layout';
+// import Home from './src/containers/Home/Home';
+import Zidlar from './src/containers/Zidlar/Zidlar';
 import courgette from './src/assets/fonts/courgette.ttf';
 
 const reducers = combineReducers({ test: () => ({}) });
@@ -24,12 +25,11 @@ class App extends Component {
     if (this.state && this.state.fontOk) {
       return (
         <Provider store={store}>
-          {/* <Presentation /> */}
-          <Layout>
-            <Text>Header?</Text>
-            <Text>Body?</Text>
-            <Text>Footer?</Text>
-          </Layout>
+          <ThemeProvider theme={theme}>
+            <Layout>
+              <Zidlar />
+            </Layout>
+          </ThemeProvider>
         </Provider>
       );
     }
